@@ -4,11 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
-        with: https://github.com/ykawamura96/rlbench_data
-        token: ${{ secrets.PAT }} 
-        path: dataset
+      - name: Checkout this repo
+        - uses: actions/checkout@v2
+      - name: Checkout dataset repo
+        uses: actions/checkout@v2
+        with: 
+          repository: ykawamura96/rlbench_data
+          token: ${{ secrets.PAT }} 
+          path: dataset
       - name: Unzip dataset
         run: |
           tar -zxvf dataset/close_box.tar.gz
