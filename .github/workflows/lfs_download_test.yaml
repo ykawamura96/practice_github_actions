@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/checkout@v2
-        with: ykawamura96/rlbench_data
+        with: https://github.com/ykawamura96/rlbench_data
         token: ${{ secrets.PAT }} 
         path: dataset
       - name: Unzip dataset
