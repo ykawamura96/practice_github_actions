@@ -14,5 +14,7 @@ jobs:
           path: dataset
       - name: Unzip dataset
         run: |
+          rm -rf dataset/close_box
           sudo apt-get -y install tree
+          tar -zxvf dataset/episode0.tar.gz
           tree
