@@ -1,4 +1,8 @@
+from os.path import join
 import os
+
+WORKING_DIR = join(os.environ['HOME'], 'work',
+                   'practice_github_actions', 'practice_github_actions')
 
 
 def test_a():
@@ -13,5 +17,5 @@ def test_b():
 
 
 def test_check_dir_structure():
-    for d in os.listdir():
+    for d in os.listdir(WORKING_DIR):
         print(d)
