@@ -1,4 +1,4 @@
-name: Lint and pytest files
+name: LFS download from private repo
 on: [ workflow_dispatch ]
 jobs:
   build:
