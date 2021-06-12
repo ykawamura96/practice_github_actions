@@ -5,6 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Download from Google Drive
+        uses: satackey/action-google-drive@v1
+        with:
+          skicka-tokencache-json: ${{ secrets.SKICKA_TOKENCACHE_JSON }}
+          download-from: 
+          download-to: ./
+          # For those who set up Google Drive API client ID and secret themselves
+          google-client-id: ${{ secrets.GOOGLE_CLIENT_ID }}
+          google-client-secret: ${{ secrets.GOOGLE_CLIENT_SECRET }}
       - name: Set up Python 3.6
         uses: actions/setup-python@v2
         with:
@@ -31,15 +40,3 @@ jobs:
           pytest
       - name: Run dir check
         run: python test/test_1.py
-      - name: Run dir check2
-        run: |
-          from os.path import join
-          import os
-          WORKING_DIR = join(os.environ['HOME'], 'work',
-                             'practice_github_actions', 'practice_github_actions')
-          for d in os.listdir():
-              print(d)    
-          for d in os.listdir(WORKING_DIR):
-              print(d)
-
-        shell: python
