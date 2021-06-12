@@ -16,5 +16,5 @@ jobs:
         run: |
           rm -rf dataset/close_box
           sudo apt-get -y install tree
-          tar -zxvf dataset/episode0.tar.gz
+          tar -xvf dataset/episode0.tar.gz
           tree
