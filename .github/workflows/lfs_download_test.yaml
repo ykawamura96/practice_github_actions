@@ -14,6 +14,6 @@ jobs:
           path: dataset
       - name: Unzip dataset
         run: |
-          sudo apt-get -y install tree unzip
-          unzip dataset/close_box.zip
+          sudo apt-get -y install tree unzip fastjar
+          jar xvf dataset/close_box.zip
           tree
