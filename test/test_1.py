@@ -19,7 +19,7 @@ def test_b():
 def test_check_dir_structure():
     for d in os.listdir():
         print(d)    
-    for d in os.listdir(WORKING_DIR):
+    for d in os.listdir(join(WORKING_DIR, 'dataset'):
         print(d)
 
 

@@ -1,0 +1,15 @@
+name: Lint and pytest files
+on: [ workflow_dispatch ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with: ykawamura96/rlbench_data
+        token: ${{ secrets.PAT }} 
+        path: dataset
+      - name: Unzip dataset
+        run: |
+          tar -zxvf dataset/close_box.tar.gz
+          sudo apt-get -y install tree
