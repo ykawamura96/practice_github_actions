@@ -6,10 +6,11 @@ jobs:
     steps:
       - name: Install package
         run: |
-          sudo apt-get -y install tree
-          which tree
-          tree .
-          tree /
+          ls
+          pwd
+          cd
+          ls
+          pwd
       # - uses: actions/checkout@v2
       # - name: Set up Python 3.6
       #   uses: actions/setup-python@v2
