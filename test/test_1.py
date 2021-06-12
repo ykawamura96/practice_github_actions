@@ -19,3 +19,6 @@ def test_b():
 def test_check_dir_structure():
     for d in os.listdir(WORKING_DIR):
         print(d)
+
+
+test_check_dir_structure()
