@@ -30,6 +30,8 @@ jobs:
         run: |
           pytest
       - name: Run dir check
+        run: python test/test_1.py
+      - name: Run dir check2
         run: |
           from os.path import join
           import os

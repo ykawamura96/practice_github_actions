@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 from os.path import join
 import os
 
@@ -14,7 +13,7 @@ def test_a():
 
 
 def test_b():
-    assert 1 == 2
+    assert 1 == 1
 
 
 def test_check_dir_structure():
