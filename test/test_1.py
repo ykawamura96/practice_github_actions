@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from os.path import join
 import os
 
