@@ -13,3 +13,4 @@ jobs:
         run: |
           tar -zxvf dataset/close_box.tar.gz
           sudo apt-get -y install tree
+          tree
